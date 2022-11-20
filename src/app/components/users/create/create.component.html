@@ -1,2 +1,10 @@
-<p>create works!</p>
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>Player Name</mat-label>
+    <input matInput placeholder="Placeholder" name="firstname" [(ngModel)]="player.firstname" >        
+  </mat-form-field>
+</p>
+<p>
   <button mat-raised-button color="primary" (click)=createUser()>Create new User</button>
+</p>
+  
