@@ -15,4 +15,9 @@ export class MatchService {
     console.log(match + " inside service");    
     return this.http.post(environment.baseURL + 'match/create', match).subscribe(response => console.log(response));
   }
+
+  getalljointeams()
+  {
+    return this.http.get(environment.baseURL + "match/getalljointeams");    
+  }  
 }

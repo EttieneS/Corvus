@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatchService } from "../../../services/match.service";
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 
 @Component({
   selector: 'app-index',
@@ -6,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class MatchIndexComponent implements OnInit {
-  constructor() { }
+  matches: any; 
+  matchTableData: any; 
+  matchTableDataSource: MatTableDataSource<any>;
 
-  ngOnInit(): void {
+  displayedColumns = ["teamaid", "teambid"]; 
+
+  constructor(private matchService: MatchService) { }
+  
+  ngOnInit(): void 
+  {
+    this.getMatches();
   }
 
+  getMatches(): void 
+  {
+    this.matchService.getalljointeams().subscribe(
+      data => {        
+        this.matchTableData = data;
+        console.log(data);
+        
+        this.matchTableDataSource = new MatTableDataSource<any>(this.matchTableData);        
+      },
+      error => {
+        console.log(error);
+      });
+  }
 }

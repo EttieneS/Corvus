@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { MatchService } from "../../../services/match.service";
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 
 @Component({
   selector: 'app-index',
@@ -7,10 +8,32 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./index.component.css']
 })
 export class TeamIndexComponent implements OnInit {
+  // matches: any; 
+  // matchTableData: any; 
+  // matchTableDataSource: MatTableDataSource<any>;
 
-  constructor() { }
+  // displayedColumns = ["teamaid", "teambid"]; 
 
-  ngOnInit(): void {
+  // constructor(private matchService: MatchService) { }
+  constructor() {}
+
+  ngOnInit(): void 
+  {
+    // this.getMatches();
   }
+
+  // getMatches(): void 
+  // {
+  //   this.matchService.getalljointeams().subscribe(
+  //     data => {        
+  //       this.matchTableData = data;
+  //       console.log(data);
+        
+  //       this.matchTableDataSource = new MatTableDataSource<any>(this.matchTableData);        
+  //     },
+  //     error => {
+  //       console.log(error);
+  //     });
+  // }
 
 }

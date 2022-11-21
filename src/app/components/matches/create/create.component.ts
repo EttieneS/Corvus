@@ -18,11 +18,6 @@ export class MatchCreateComponent implements OnInit {
     teambid: -1
   }
 
-  team = {
-    id: -1,
-    teamname: ''
-  }
-
   teams: any;
 
   constructor(private matchService: MatchService, private teamService: TeamService) { }
