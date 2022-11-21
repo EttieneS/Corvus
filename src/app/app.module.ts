@@ -15,12 +15,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule } from '@angular/forms';
+import { IndexComponent } from './components/matches/index/index.component';
+import { TeamIndexComponent } from './components/teams/index/index.component';
+import { TeamCreateComponent } from './components/teams/create/create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayerIndexComponent,
-    PlayerCreateComponent
+    PlayerCreateComponent,
+    TeamIndexComponent,
+    TeamCreateComponent
   ],
   imports: [
     AppRoutingModule,

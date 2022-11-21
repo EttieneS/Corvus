@@ -6,8 +6,8 @@ import { RouterModule } from '@angular/router';
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css']
 })
-export class PlayerIndexComponent implements OnInit {
-  players
+export class TeamIndexComponent implements OnInit {
+
   constructor() { }
 
   ngOnInit(): void {

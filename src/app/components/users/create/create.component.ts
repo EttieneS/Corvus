@@ -18,8 +18,8 @@ export class PlayerCreateComponent implements OnInit {
   }
 
   createUser()
-  {    
-    var response = this.playerService.create(this.player);
+  {        
+    this.playerService.create(this.player);
 
     window.location.href = "users/index";
   }

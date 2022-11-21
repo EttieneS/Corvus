@@ -1,17 +1,17 @@
 import { Component, Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Player } from '../models/player';
+import { Team } from '../models/team';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class PlayerService {
+export class TeamService {
 
   constructor(private http: HttpClient) { }
 
-  create(player: Player) {    
-    return this.http.post(environment.baseURL + 'player/create', player).subscribe(response => console.log(response));
+  create(player: Team) {    
+    return this.http.post(environment.baseURL + 'team/create', player).subscribe(response => console.log(response));
   }
 }
