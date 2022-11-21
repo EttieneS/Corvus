@@ -12,12 +12,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule } from '@angular/forms';
-import { IndexComponent } from './components/matches/index/index.component';
+import { MatchIndexComponent } from './components/matches/index/index.component';
 import { TeamIndexComponent } from './components/teams/index/index.component';
 import { TeamCreateComponent } from './components/teams/create/create.component';
+import { MatchCreateComponent } from './components/matches/create/create.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { TeamCreateComponent } from './components/teams/create/create.component'
     PlayerIndexComponent,
     PlayerCreateComponent,
     TeamIndexComponent,
-    TeamCreateComponent
+    TeamCreateComponent,
+    MatchCreateComponent, 
+    MatchIndexComponent
   ],
   imports: [
     AppRoutingModule,
@@ -37,6 +41,7 @@ import { TeamCreateComponent } from './components/teams/create/create.component'
     MatButtonModule,
     MatInputModule, 
     MatFormFieldModule,
+    MatSelectModule,
     MatSidenavModule,
     MatIconModule,
     MatToolbarModule,

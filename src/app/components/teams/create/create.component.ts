@@ -10,6 +10,7 @@ import { TeamService } from "../../../services/team.service";
 })
 export class TeamCreateComponent implements OnInit {
   team = {
+    id: 0,
     teamname: '', 
   }
   constructor(private teamService: TeamService) { }
