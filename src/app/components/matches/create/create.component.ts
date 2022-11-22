@@ -15,7 +15,8 @@ export class MatchCreateComponent implements OnInit {
   match = {
     id: 0,
     teamaid: -1, 
-    teambid: -1
+    teambid: -1,
+    score: ""
   }
 
   teams: any;
@@ -43,5 +44,4 @@ export class MatchCreateComponent implements OnInit {
     )
     console.log("response: " + response[0]);
   }
-
 }

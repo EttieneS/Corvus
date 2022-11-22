@@ -14,4 +14,14 @@ export class PlayerService {
   create(player: Player) {    
     return this.http.post(environment.baseURL + 'player/create', player).subscribe(response => console.log(response));
   }
+
+  getpositions()
+  {      
+    return this.http.get(environment.baseURL + "player/getpositions");
+  }
+  
+  getalljointeams()
+  {
+    return this.http.get(environment.baseURL + "player/getalljointeams");
+  }
 }

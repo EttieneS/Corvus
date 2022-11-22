@@ -10,6 +10,7 @@ import { PlayerIndexComponent } from './components/users/index/index.component';
 import { PlayerCreateComponent } from './components/users/create/create.component';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -41,6 +42,7 @@ import { MatchCreateComponent } from './components/matches/create/create.compone
     HttpClientModule, 
 
     MatButtonModule,
+    MatCheckboxModule,
     MatInputModule, 
     MatFormFieldModule,
     MatSelectModule,

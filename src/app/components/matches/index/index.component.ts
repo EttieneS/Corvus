@@ -12,7 +12,7 @@ export class MatchIndexComponent implements OnInit {
   matchTableData: any; 
   matchTableDataSource: MatTableDataSource<any>;
 
-  displayedColumns = ["teamaid", "teambid"]; 
+  displayedColumns = ["teamaid", "teambid", "score", "winner"]; 
 
   constructor(private matchService: MatchService) { }
   
@@ -25,9 +25,7 @@ export class MatchIndexComponent implements OnInit {
   {
     this.matchService.getalljointeams().subscribe(
       data => {        
-        this.matchTableData = data;
-        console.log(data);
-        
+        this.matchTableData = data;                
         this.matchTableDataSource = new MatTableDataSource<any>(this.matchTableData);        
       },
       error => {

@@ -5,6 +5,35 @@
   </mat-form-field>
 </p>
 <p>
+  <mat-form-field appearance="fill">
+    <mat-label>Player Last Name</mat-label>
+    <input matInput placeholder="Placeholder" lastname="lastname" [(ngModel)]="player.lastname" >
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="fill">
+      <mat-label>Position</mat-label>
+      <mat-select name="position" [(ngModel)]="player.position" >
+          <mat-option *ngFor="let position of positions" [value]="position.id" >
+              {{ position.description }}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="fill">
+      <mat-label>Team</mat-label>
+      <mat-select name="teamaid" [(ngModel)]="player.teamid" >
+          <mat-option *ngFor="let team of teams" [value]="team.id" >
+              {{ team.teamName }}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
+</p>
+<p>
+  <mat-checkbox name="active" [(ngModel)]="player.active" >Active</mat-checkbox>  
+</p>
+<p>
   <button mat-raised-button color="primary" (click)=createUser()>Create new User</button>
 </p>
   

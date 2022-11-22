@@ -19,6 +19,12 @@
     </mat-form-field>
 </p>
 <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Match Score</mat-label>
+      <input matInput placeholder="Placeholder" name="score" [(ngModel)]="match.score" >        
+    </mat-form-field>
+  </p>
+<p>
     <button mat-raised-button color="primary" (click)=createMatch()>Create new Match</button>
 </p>
     
